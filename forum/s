@@ -1,0 +1,9 @@
+<?php
+
+    $id = $_GET['threadid'];
+    $sql = "SELECT * FROM `threads` WHERE thread_id = $id";
+    $result = mysqli_query($conn, $sql);
+    while($row = mysqli_fetch_assoc($result)){
+        $title = $row['thread_title'];
+        $desc = $row['thread_desc'];
+    }
